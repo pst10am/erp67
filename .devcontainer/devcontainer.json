@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/postgres:1": {}
   },
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install && echo 'DATABASE_URL=\"postgresql://postgres@localhost:5432/erp67\"' > .env && createdb -U postgres erp67",
   "customizations": {
     "vscode": {
       "extensions": [
